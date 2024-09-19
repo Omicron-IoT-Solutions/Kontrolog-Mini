@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'C:\Users/htoro\Dropbox/VISUAL_STUDIO\Kontrolog_Mini/.pio/build/esp32dev/firmware.bin'
+elf = 'C:\Users/htoro\Dropbox/VISUAL_STUDIO\Kontrolog_Mini/.pio/build/esp32dev/firmware.elf'
