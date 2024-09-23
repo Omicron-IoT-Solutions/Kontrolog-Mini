@@ -65,11 +65,17 @@ void setup() {
 // Main Loop
  void loop()
  {
+	 
+  //************************************************************************************************************************************************************
+  //Example for the reading of a 10k NTC temperature sensor 
+
   Comms.SET_LED_RGB(led_red);
-  In.READ_ANALOG_AND_STORING();                             // Reads The  A/D channels  IN1/IN2/VDC                          
-  Ko.IN1.value=In.NTC_TEMP_INPUT_R(analog_input1);                 // A 10K NTC is connected to input 1 channel, so the A/D value reading is converted to Temperature
+  In.READ_ANALOG_AND_STORING();                             // Reads The  A/D channels  IN1/IN2/VDC
+  Ko.IN1.value=In.NTC_TEMP_INPUT_R(analog_input1);          // A 10k NTC is connected to input 1 channel, so the A/D value reading is converted to temperature
   Serial.printf("Temperature from NTC 10K Sensor : %.1f °C\r\n", float(Ko.IN1.value)/10.0);
   delay(500);
   Comms.SET_LED_RGB(led_off);
   delay(500);
+  //************************************************************************************************************************************************************
+	 
  }
