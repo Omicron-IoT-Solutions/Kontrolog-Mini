@@ -29,7 +29,7 @@ version 1.0 September 2024
 #pragma once
 #include <Arduino.h>
 #include <Wire.h>
-#include "tla2528.h"
+#include "TLA2528.h"
 #include "config.h"
 
 //  TLA2528 Pin connections for  Kontrolog-Mini 1.0

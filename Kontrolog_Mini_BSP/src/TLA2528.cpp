@@ -28,7 +28,7 @@ version 1.0 September 2024
 
 
 #include "TLA2528.h"
-#include "TLA2528_c.h"
+#include "TLA2528_C.h"
 
 
 int TLA2528Class::begin()
@@ -50,7 +50,7 @@ int TLA2528Class::begin()
 
 void TLA2528Class::end()
 {
-    MyI2C_1.end();
+    //MyI2C_1.end();
 }
 
 void TLA2528Class::Read_TLA2528_All_registers_Status(void)

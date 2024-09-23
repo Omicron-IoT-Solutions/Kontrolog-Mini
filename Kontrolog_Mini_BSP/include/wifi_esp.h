@@ -35,7 +35,7 @@ version 1.0 September 2024
 #include <WiFiMulti.h> 
 #include <WebServer.h>
 #include <HTTPClient.h>
-#include "Config.h"
+#include "config.h"
 #include "RTC_clock.h"
 #include "eeprom_esp.h"
 #include "communications.h"
