@@ -28,8 +28,8 @@ version 1.0 September 2024
 
 #include <Arduino.h>
 #include <EEPROM.h>
-#include "Config.h"
-#include "RTC_CLOCK.h"
+#include "config.h"
+#include "RTC_clock.h"
 
 // Data Version in EEPROM
 const int EEPROM_VERSION = 0x0001;
