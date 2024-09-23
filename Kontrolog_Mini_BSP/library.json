@@ -2,7 +2,7 @@
   "name": "Kontrolog_Mini",
   "version": "1.0.0",
   "description": "Library to control the hardware of the Kontrolog Mini V 1.0.0",
-  "keywords": ["kontrolog", "mini", "iot", "esp32, plc"],
+  "keywords": ["kontrolog", "mini", "iot", "esp32", "plc"],
   "repository": {
     "type": "git",
     "url": "https://github.com/Omicron-IoT-Solutions/Kontrolog-Mini"
