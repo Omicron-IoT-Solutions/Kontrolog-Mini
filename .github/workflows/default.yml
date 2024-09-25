@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Full-Code" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "Full-Code" ]
 
 jobs:
   build:
