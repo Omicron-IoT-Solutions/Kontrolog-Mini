@@ -20,6 +20,6 @@ Now you must assign to the software the location where the downloaded firmware f
   
 Select the communication port your Kontrolog Mini is connected to on your computer and set the baud rate to 460800 Baud. With this you can start downloading the Firmaware to your Kontrolog Mini and it is ready to be configured. 
 
-![Captura de pantalla 2024-09-26 093125](https://github.com/user-attachments/assets/0a941db9-4673-432d-a8cd-703622fdbff1)
+![Captura de pantalla 2024-09-26 093125](https://github.com/user-attachments/assets/965401de-3623-4b86-984d-8fd21320c8ce)
 
 The important thing about this tool is that your Kontrolog Mini is already enabled so you can configure it through the HMI interface or through the IoT web platform. From the tool where you are programming the Kontrolog Mini, you can configure the inputs and outputs, indicate the functions you want them to perform such as sensor readings, activation of relay outputs, define the types of communication you want to use and assign the functions for the LED and the buzzer. Just manipulate the control tools to know how to set the functions you want your Kontrolog Mini to perform.
