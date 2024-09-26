@@ -9,6 +9,8 @@ The Kontrolog Mini firmware contains the factory default code, which is programm
 
 To install the Firmware we provide you, you must install the “FLASH DOWNLOAD TOOL” program, which you can find at the link https://www.espressif.com/en/support/download/other-tools
 
+![bitmap4](https://github.com/user-attachments/assets/b6a006e4-c233-4be9-896f-3023961ebbd6)
+
 Once installed, download the Firmware binary file and connect your Kontrolog Mini to your computer using the USB-C cable. Then, run the downloaded application and set, in the download tool mode, ESP32 as the chip type and the working mode as development. 
 
 ![Captura de pantalla 2024-09-26 093040](https://github.com/user-attachments/assets/5428a370-f87d-42e4-8ab8-179a462d1211)
