@@ -24,4 +24,10 @@ Select the communication port your Kontrolog Mini is connected to on your comput
 
 ![Captura de pantalla 2024-09-26 093125](https://github.com/user-attachments/assets/965401de-3623-4b86-984d-8fd21320c8ce)
 
+For practical purposes, you will be able to verify this code by simulating it using the NEXTION software, which allows you to simulate and implement graphical HMI interfaces. You must download and install this software https://nextion.tech/nextion-editor/
+
+![bitmap5](https://github.com/user-attachments/assets/474b78f5-1276-4cc6-bcec-e282d71e6dc2)
+
+Next, download the .HMI file, which is the code we provide so that you can simulate the HMI screen in NEXTION and which is also the code that is set in the HMI screens that allow you to program the Kontrolog Mini locally in No-Code mode.
+
 The important thing about this tool is that your Kontrolog Mini is already enabled so you can configure it through the HMI interface or through the IoT web platform. From the tool where you are programming the Kontrolog Mini, you can configure the inputs and outputs, indicate the functions you want them to perform such as sensor readings, activation of relay outputs, define the types of communication you want to use and assign the functions for the LED and the buzzer. Just manipulate the control tools to know how to set the functions you want your Kontrolog Mini to perform.
