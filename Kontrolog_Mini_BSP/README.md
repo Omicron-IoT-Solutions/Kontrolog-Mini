@@ -28,11 +28,10 @@ our GitHub repository https://github.com/Omicron-IoT-Solutions/Kontrolog-Mini
 
 As a quick start, you can access the following tutorials in which we introduce you to the Kontrolog 
 Mini and its possible applications; we explain you how the hardware is made up and the basic drawings and
-and what you should consider; and we show you through an example of reading an NTC 10k temperature sensor, 
-how you can use this library:
+and what you should consider; and we show you through an example of reading an NTC 10k temperature sensor:
 
-- 
-- 
+- https://youtu.be/A-u6I39MJpE
+- https://youtu.be/Ibu8fl2TTMs
 
 In our youtube channel https://www.youtube.com/@Omicron-IoT-Solutions we will be generating new and improved tutorials about 
 new and improved tutorials on what functionalities and how you can use the Kontrolog Mini for your ideas.
