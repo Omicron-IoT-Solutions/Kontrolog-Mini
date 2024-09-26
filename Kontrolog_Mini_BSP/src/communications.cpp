@@ -153,7 +153,7 @@ void comms::Communication_Task(void)
                     {
                     debug_msg("Open WiFi Captive Portal");
                     Wi.enter_to_AP_Mode();                            // Enter into AP Mode 
-                    Ko.TIMERS.timer_wifi_AP=18;                      // Init Timer en AP Mode in 180 Seconds : User can modify this time
+                    Ko.TIMERS.timer_wifi_AP=180;                      // Init Timer en AP Mode in 180 Seconds : User can modify this time
                     Ko.PUB.com_task=wifi_AP_mode;                     // Go to WiFi AP mode Task
                     }
                 else
