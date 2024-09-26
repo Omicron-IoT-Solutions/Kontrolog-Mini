@@ -37,6 +37,6 @@ The main technical features of this model of the Kontrolog Mini device are liste
   - Event counter.
   - PID control. 
 - HMI screen: (Human Machine Interface); 4.3" full-color LCD touch screen for programming and data visualization.
-- Communication port, where a dual communication module with protocols for LoRaWAN™/Sigfox for the USA/EU/Latam/Australia zones or a WiFi communication module can be installed.
+- Communication port, where a dual communication module with protocols for LoRaWAN™/Sigfox for the USA/EU/Latam/Australia zones or you can choose to communicate via the ESP32's own WiFi..
   
 The system is delivered with the wireless communication modules ordered. According to the product philosophy, all the above-mentioned add-ons can be prescribed, and remote data transmission can be done by different popular wireless technologies. Customers are also offered memberships for the use of a platform for remote monitoring and configuration, supported by the manufacturer.
