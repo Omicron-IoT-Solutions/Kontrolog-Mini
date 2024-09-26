@@ -10,6 +10,7 @@ The Kontrolog Mini firmware contains the factory default code, which is programm
 To install the Firmware we provide you, you must install the “FLASH DOWNLOAD TOOL” program, which you can find at the link https://www.espressif.com/en/support/download/other-tools
 
 Once installed, download the Firmware binary file and connect your Kontrolog Mini to your computer using the USB-C cable. Then, run the downloaded application and set, in the download tool mode, ESP32 as the chip type and the working mode as development. 
+
 ![Captura de pantalla 2024-09-26 093040](https://github.com/user-attachments/assets/5428a370-f87d-42e4-8ab8-179a462d1211)
 
 Now you must assign to the software the location where the downloaded firmware file is located and set the memory address to 0x10000. Make sure that the following parameters are assigned:
@@ -18,6 +19,7 @@ Now you must assign to the software the location where the downloaded firmware f
 - The “DoNotChgBin” option must be enabled.
   
 Select the communication port your Kontrolog Mini is connected to on your computer and set the baud rate to 460800 Baud. With this you can start downloading the Firmaware to your Kontrolog Mini and it is ready to be configured. 
+
 ![Captura de pantalla 2024-09-26 093125](https://github.com/user-attachments/assets/0a941db9-4673-432d-a8cd-703622fdbff1)
 
 The important thing about this tool is that your Kontrolog Mini is already enabled so you can configure it through the HMI interface or through the IoT web platform. From the tool where you are programming the Kontrolog Mini, you can configure the inputs and outputs, indicate the functions you want them to perform such as sensor readings, activation of relay outputs, define the types of communication you want to use and assign the functions for the LED and the buzzer. Just manipulate the control tools to know how to set the functions you want your Kontrolog Mini to perform.
