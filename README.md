@@ -3,7 +3,7 @@
 ## General
 This branch contains the Firmaware code (default programming of the device) for the Kontrolog Mini to be programmed locally through the graphical HMI interface provided or remotely through the IoT Web platform, as well as examples and guided tutorials for you to learn how to program in No-Code mode your Kontrolog Mini.
 
-## Description
+## Flashing Firmware to the Kontrolog Mini
 ![bitmap3](https://github.com/user-attachments/assets/53b01053-544c-4baa-89e1-4f7cb251cfb4)
 The Kontrolog Mini firmware contains the factory default code, which is programmed into the Kontrolog Mini from the moment you receive it for your purchase, where you only need to link it to the graphical HMI or IoT Web platform and you can start configuring alarms, inputs and outputs, and monitor the status of them.
 
@@ -24,6 +24,7 @@ Select the communication port your Kontrolog Mini is connected to on your comput
 
 ![Captura de pantalla 2024-09-26 093125](https://github.com/user-attachments/assets/965401de-3623-4b86-984d-8fd21320c8ce)
 
+## Simulating our graphic HMI
 For practical purposes, you will be able to verify this code by simulating it using the NEXTION software, which allows you to simulate and implement graphical HMI interfaces. You will need to download and install this software, which you will find at the following [link](https://nextion.tech/nextion-editor/)
 
 ![bitmap5](https://github.com/user-attachments/assets/474b78f5-1276-4cc6-bcec-e282d71e6dc2)
