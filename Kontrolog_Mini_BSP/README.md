@@ -1,8 +1,8 @@
-KONTROLOG-MINI LIBRARIES FOR ARDUINO
-By Omicron IoT Solutions
+KONTROLOG-MINI LIBRARIES FOR ARDUINO.
+By Omicron IoT Solutions.
 	
 
-Copyright (c) 2024 Omicron IoT Solutions
+Copyright (c) 2024 Omicron IoT Solutions.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-version 1.0 September 2024
+Version 1.0 September 2024.
 
 In this library you will be able to perform deeper control over the Kontrolog Mini hardware.
 
