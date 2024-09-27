@@ -12,21 +12,17 @@ For proper operation, in the project to which you want to add the Kontrolog Mini
 Just link this library for the Kontrolog Mini in your project libraries from the PlatformIO library registry, which you can find as “Kontrolog Mini” (keywords: “kontrolog”, “mini”, “iot”, “esp32”, “plc”).
 
 ## Structure
-- Kontrolog Mini
-  - .pio
-  - .vscode
+- Kontrolog_Mini_BSP
   - docs
     - (datasheets, manuals and schematics)
   - examples
     - ReadNTC10k.cpp
   - include
-  - lib
   - scr
     - (Files .cpp y .h)
-  - test
-  - .gitignore
-  - library.json
   - README.md
+  - library.json
   - platformio.ini
+  - wokwi.toml
  
-The important thing about this tool is that you can capture all your ideas and everything you want to run with your Kontrolog Mini. From your main header file, you can call the available inputs and outputs, indicate the functions you want them to perform such as sensor readings, activation of relay outputs, define the types of communication you want to link and assign the functions for the LED and the buzzer. You only need to browse through each of the header files and source codes to know how to call the respective functions and define the desired states.
+The important thing about this tool is that you can capture all your ideas and everything you want to run with your Kontrolog Mini. From your main header file, you can call the available inputs and outputs, indicate the functions you want them to perform such as sensor readings, activation of relay outputs, define the types of communication you want to link and assign the functions for the LEDs and the buzzer. You only need to browse through each of the header files and source codes to know how to call the respective functions and define the desired states.
