@@ -30,12 +30,12 @@ As a quick start, you can access the following tutorials in which we introduce y
 Mini and its possible applications; we explain you how the hardware is made up and the basic drawings and
 and what you should consider; and we show you through an example of reading an NTC 10k temperature sensor:
 
-- https://youtu.be/A-u6I39MJpE
-- https://youtu.be/Ibu8fl2TTMs
+- [Getting to know the Kontrolog Mini](https://youtu.be/A-u6I39MJpE).
+- [This is the Kontrolog Mini! Full Hardware Review](https://youtu.be/Ibu8fl2TTMs).
 
-In our youtube channel https://www.youtube.com/@Omicron-IoT-Solutions we will be generating new and improved tutorials about 
+In our youtube channel In our Youtube playlist, [Discover the Kontrolog Mini](https://www.youtube.com/watch?v=A-u6I39MJpE&list=PLyuRcsMDP86IX-V9vOogLy5s5wDVxQtYA), we will be generating new and improved tutorials about 
 new and improved tutorials on what functionalities and how you can use the Kontrolog Mini for your ideas.
 
-Omicron IoT Solutions
-https://omicroniot.com/
+[Omicron IoT Solutions](https://omicroniot.com/)
+
 solutions@omicroniot.com
