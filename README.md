@@ -5,7 +5,7 @@ This branch contains the Firmaware code (default programming of the device) for 
 
 ## Flashing Firmware to the Kontrolog Mini
 ![bitmap3](https://github.com/user-attachments/assets/53b01053-544c-4baa-89e1-4f7cb251cfb4)
-The Kontrolog Mini firmware contains the factory default code, which is programmed into the Kontrolog Mini from the moment you receive it for your purchase, where you only need to link it to the graphical HMI or IoT Web platform and you can start configuring alarms, inputs and outputs, and monitor the status of them.
+[The Kontrolog Mini Firmware](https://github.com/Omicron-IoT-Solutions/Kontrolog-Mini/tree/No-Code/Firmware) contains the factory default code, which is programmed into the Kontrolog Mini from the moment you receive it for your purchase, where you only need to link it to the graphical HMI or IoT Web platform and you can start configuring alarms, inputs and outputs, and monitor the status of them.
 
 To install the Firmware we provide you, you must install the “FLASH DOWNLOAD TOOL” program, which you can find at the following [link](https://www.espressif.com/en/support/download/other-tools)
 
@@ -29,7 +29,7 @@ For practical purposes, you will be able to verify this code by simulating it us
 
 ![bitmap5](https://github.com/user-attachments/assets/474b78f5-1276-4cc6-bcec-e282d71e6dc2)
 
-Next, download the .HMI file, which is the code we provide so that you can simulate the HMI screen in NEXTION and which is also the code that is set in the HMI screens that allow you to program the Kontrolog Mini locally in No-Code mode.
+Next, download the [.HMI file](https://github.com/Omicron-IoT-Solutions/Kontrolog-Mini/tree/No-Code/Display), which is the code we provide so that you can simulate the HMI screen in NEXTION and which is also the code that is set in the HMI screens that allow you to program the Kontrolog Mini locally in No-Code mode.
 
 Run Nextion, connect your Kontrolog Mini to your computer via USB-C cable, and select the option that allows you to open documents and indicate the .HMI file you have previously downloaded, and start the debug mode so you can simulate the HMI screen with which you can configure your Kontrolog Mini.
 
