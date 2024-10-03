@@ -128,6 +128,7 @@ void comms::Transmit_Data(unsigned char *buffer_datos, char ack) {
 //-------------------------------------------------------------------------------------------------------
 void comms::Communication_Task(void)
 {
+    Serial_Rx();
     if (Ko.TIMERS.timer_publication > 0)
         Ko.TIMERS.timer_publication--;
 
@@ -321,7 +322,6 @@ void comms::Communication_Task(void)
                 
             case receiving:                             // Receiving task 
                 {
-		Serial_Rx();
                 if (Ko.CONFIG.DT.com_module_det==mod_lora)
                     {
                     int res=Lo.wait_Rx_LoRa();
