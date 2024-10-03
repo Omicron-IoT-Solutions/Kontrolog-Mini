@@ -321,6 +321,7 @@ void comms::Communication_Task(void)
                 
             case receiving:                             // Receiving task 
                 {
+		Serial_Rx();
                 if (Ko.CONFIG.DT.com_module_det==mod_lora)
                     {
                     int res=Lo.wait_Rx_LoRa();
