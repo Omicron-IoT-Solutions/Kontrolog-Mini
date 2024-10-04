@@ -137,9 +137,9 @@ void comms::Communication_Task(void)
     }
 
     if (Ko.PUB.com_task == standby) {
-        digitalWrite(LED_GREEN, HIGH);
+        digitalWrite(LED_GREEN, HIGH);              // Off led
     } else {
-            digitalWrite(LED_GREEN, !digitalRead(LED_GREEN));
+            digitalWrite(LED_GREEN, !digitalRead(LED_GREEN));       // Flash LED
         }
 
     switch (Ko.PUB.com_task) {
@@ -433,28 +433,42 @@ void comms::Prepare_Data_To_Send(void)
 */
 {
     unsigned int data;
-   
+        /*
         buf_str[0] = Ko.PUB.alarm_type;                          // Type of Alarm data (For Example Alarm in Input 1)
         Ko.PUB.alarm_type=0;
+        */
 
         // Sensor 1
+        /*
         data= Ko.IN1.value;
         buf_str[1] =(data>>8)&0x00FF;
         buf_str[2] =(data&0x00FF);
+        */
 
         // Sensor 2
+        /*
         data = Ko.IN2.value;
         buf_str[3] = (data>>8)&0x00FF;
         buf_str[4] = (data&0x00FF);
+        */
+
+        //ModBus RTU
+        /*
+        data = (Ko.MODBUS.registers[1]<<8)|Ko.MODBUS.registers[2];
+        buf_str[1] =(data>>8)&0x00FF;
+        buf_str[2] =(data&0x00FF);
+        */
 
         // DC Voltage 
-        buf_str[8] = (unsigned char)  Ko.VDC.value;
+        //buf_str[8] = (unsigned char)  Ko.VDC.value;
 
         // Outpus status
+        /*
         unsigned char BITS=0;                                     
         BITS|=(Ko.OUT2.value<<2);       // Bit 2  OUT2
         BITS|=(Ko.OUT1.value<<1);       // Bit 1  OUT1
         buf_str[11]|=BITS;
+        */
 }
 
 //-------------------------------------------------------------------------------------------------------

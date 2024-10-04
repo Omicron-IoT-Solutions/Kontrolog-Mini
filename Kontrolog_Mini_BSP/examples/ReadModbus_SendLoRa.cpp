@@ -1,6 +1,7 @@
 /****************************************************************************************************************************************************
 
-Example code for reading a 10k NTC sensor and blinking the RGB LED red on each data sample.
+Example code for reading a Modbus RTU sensor (connected to the RS-485 port), blinking of the RGB LED in violet color at each reading sample, and 
+sending via LoRaWAN technology.
 
 ****************************************************************************************************************************************************/
 
@@ -46,15 +47,26 @@ void setup() {
  {
 // Paste the following code into the void loop of your main.cpp file where you are going to program your project
 /****************************************************************************************************************************************************/
-  In.READ_ANALOG_AND_STORING();                             // Reads The  A/D channels  IN1/IN2/VDC
-  Ko.IN1.value=In.NTC_TEMP_INPUT_R(analog_input1);          /* A 10k NTC is connected to input 1 channel, so the A/D value reading is converted to 
-                                                               temperature*/
-  Serial.printf("Temperature from NTC 10K Sensor 1 : %.1f °C\r\n", float(Ko.IN1.value)/10.0);  /* The reading is scaled down by a factor of 10 so that
-                                                                                                  the reading in °C is printed on the serial 
-                                                                                                  monitor.*/
-  Comms.SET_LED_RGB(led_red);                               // Turns on the RGB LED and activates it in red color.
-  Ti.DELAY_TMR(500);                                        // A delay of 500ms is applied.
-  Comms.SET_LED_RGB(led_off);                               // Turns off the RGB LED.
-  Ti.DELAY_TMR(500);                                        // A delay of 500ms is applied.
+  Ko.MODBUS.slave_address=1;                        // The slave address is assigned.
+  Ko.MODBUS.funtion_code=3;                         // Retention registers are read.
+  Ko.MODBUS.start_address=1;                        // The start register to be read is assigned.
+  Ko.MODBUS.coils_no=1;                             // The number of coils is assigned.
+  Modbus.Modbus_Telegram(Ko.MODBUS);                /* Sends a Modbus telegram, waits for a response from the slave, verifies if it is valid and 
+                                                       stores the received registers*/
+  
+  Serial.print("Lectura Modbus:");                  // The sensor reading is printed by registering it in hexadecimal format.
+  for (int x = 0; x < 40; x++)
+  {    
+    Serial.print(Ko.MODBUS.registers[x],HEX);
+    Serial.print(" ");
+  }
+  Serial.println();
+  
+  Ti.DELAY_TMR(500);                                // A delay of 500ms is applied.
+  Comms.SET_LED_RGB(led_violet);                    // Turns on the RGB LED and activates it in red color.
+  Ti.DELAY_TMR(500);                                // A delay of 500ms is applied.
+  Comms.SET_LED_RGB(led_off);                       // Turns off the RGB LED.
+
+  Comms.Communication_Task();                       // Communication tasks are performed.
 /****************************************************************************************************************************************************/
  }

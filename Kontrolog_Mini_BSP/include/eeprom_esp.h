@@ -32,7 +32,7 @@ version 1.0 September 2024
 #include "RTC_clock.h"
 
 // Data Version in EEPROM
-const int EEPROM_VERSION = 0x0002;
+const int EEPROM_VERSION = 0x0003;
 
 // Reserved addresses in the EEPROM for stored parameters for inputs, outputs and general parameters
 const unsigned char
@@ -121,7 +121,7 @@ const int Initial_Params [16] = {                                 // General Con
 1,                     // Enter to Service Mode
 0,                     // Not used,  Reserved
 1,                     // Version of factory parameters (Reset to factory settings Stored in EEPROM)
-2,                     // Type of communication module programmed (0: none, 1: Sigfox, 2: WiFi, 3: Lora)
+3,                     // Type of communication module programmed (0: none, 1: Sigfox, 2: WiFi, 3: Lora)
 0,                     // Not Used, Reserved
 3,                     // Number of messages for downlink
 2,                     // RF zone  (2: USA-US915, 4: Latam-Australia-AU915 / 1: EU-EU868)

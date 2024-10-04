@@ -1,7 +1,7 @@
 {
   "name": "Kontrolog_Mini",
-  "version": "1.0.1",
-  "description": "Library to control the hardware of the Kontrolog Mini V 1.0.2",
+  "version": "1.0.3",
+  "description": "Library to control the hardware of the Kontrolog Mini V 1.0.3",
   "keywords": ["kontrolog", "mini", "iot", "esp32", "plc"],
   "repository": {
     "type": "git",
