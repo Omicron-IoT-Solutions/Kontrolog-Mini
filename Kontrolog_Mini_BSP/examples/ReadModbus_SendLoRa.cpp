@@ -54,7 +54,7 @@ void setup() {
   Modbus.Modbus_Telegram(Ko.MODBUS);                /* Sends a Modbus telegram, waits for a response from the slave, verifies if it is valid and 
                                                        stores the received registers*/
   
-  Serial.print("Lectura Modbus:");                  // The sensor reading is printed by registering it in hexadecimal format.
+  Serial.print("Modbus read:");                  // The sensor reading is printed by registering it in hexadecimal format.
   for (int x = 0; x < 40; x++)
   {    
     Serial.print(Ko.MODBUS.registers[x],HEX);
