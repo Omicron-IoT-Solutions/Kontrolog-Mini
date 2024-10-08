@@ -51,7 +51,7 @@ void setup() {
   Ko.MODBUS.funtion_code=3;                         // Retention registers are read.
   Ko.MODBUS.start_address=1;                        // The start register to be read is assigned.
   Ko.MODBUS.coils_no=1;                             // The number of coils is assigned.
-  Modbus.Modbus_Telegram(Ko.MODBUS);                /* Sends a Modbus telegram, waits for a response from the slave, verifies if it is valid and 
+  Ko.MODBUS=Modbus.Modbus_Telegram(Ko.MODBUS);      /* Sends a Modbus telegram, waits for a response from the slave, verifies if it is valid and 
                                                        stores the received registers*/
   
   Serial.print("Modbus read:");                  // The sensor reading is printed by registering it in hexadecimal format.
