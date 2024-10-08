@@ -80,10 +80,6 @@ char BufferRx[40];
                 {
                 MOD.registers[i-k]=BufferRx[i];
                 }
-                for (int x = 0; x < 40; x++)
-                {
-                    Ko.MODBUS.registers[x]=MOD.registers[x];
-                }
             return MOD;
             }
         else 
