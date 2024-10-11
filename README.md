@@ -8,13 +8,22 @@ This branch contains the documentation and the basic header and implementation f
 ## BSP Structure
 
 - [Kontrolog_Mini_BSP](https://github.com/Omicron-IoT-Solutions/Kontrolog-Mini/tree/Full-Code/Kontrolog_Mini_BSP)
+  - docs
+    - English
+      - Datasheets
+      - Manuals
+      - Schematics
+    - Español
+      - Esquemas
+      - Hojas de datos
+      - Manuales
   - examples
     - ReadModbus_SendLoRa.cpp
     - ReadNTC10k.cpp
   - include
-    - (Files .h)
+    - (Header files .h)
   - scr
-    - (Files .cpp)
+    - (Source files .cpp)
   - README.md
   - library.json
   - platformio.ini
