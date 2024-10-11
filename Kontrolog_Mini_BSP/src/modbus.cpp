@@ -75,7 +75,7 @@ char BufferRx[40];
             k++;
         if((BufferRx[k]==au8Buffer[0])&&(BufferRx[k+1]==au8Buffer[1]))      // Find the ID and  funtion code in the answer
             {                                                               // Also user can check the Rx CRC for correct reading
-            int qty = MOD.coils_no*2+3;
+            int qty = MOD.coils_no*2+5;                                     // Reading of ID, function code, number of records, payload and CRC
             for(i=k;i<(qty+k);i++)
                 {
                 MOD.registers[i-k]=BufferRx[i];

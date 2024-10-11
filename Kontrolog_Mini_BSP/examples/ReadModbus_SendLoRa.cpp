@@ -1,9 +1,9 @@
-/****************************************************************************************************************************************************
+/********************************************************************************************************************************************
 
-Example code for reading a Modbus RTU sensor (connected to the RS-485 port), blinking of the RGB LED in violet color at each reading sample, and 
-sending via LoRaWAN technology.
+Example code for reading a Modbus RTU sensor (connected to the RS-485 port), blinking of the RGB LED in violet color at each reading sample, 
+and sending via LoRaWAN technology.
 
-****************************************************************************************************************************************************/
+*********************************************************************************************************************************************/
 
 #include "config.h"
 #include "wifi_esp.h"
@@ -46,20 +46,33 @@ void setup() {
  void loop()
  {
 // Paste the following code into the void loop of your main.cpp file where you are going to program your project
-/****************************************************************************************************************************************************/
-  Ko.MODBUS.slave_address=1;                        // The slave address is assigned.
-  Ko.MODBUS.funtion_code=3;                         // Retention registers are read.
-  Ko.MODBUS.start_address=1;                        // The start register to be read is assigned.
-  Ko.MODBUS.coils_no=1;                             // The number of coils is assigned.
-  Ko.MODBUS=Modbus.Modbus_Telegram(Ko.MODBUS);      /* Sends a Modbus telegram, waits for a response from the slave, verifies if it is valid and 
-                                                       stores the received registers*/
-  
-  Serial.print("Modbus read:");                  // The sensor reading is printed by registering it in hexadecimal format.
-  for (int x = 0; x < 40; x++)
-  {    
-    Serial.print(Ko.MODBUS.registers[x],HEX);
-    Serial.print(" ");
-  }
+/********************************************************************************************************************************************/
+  Ko.MODBUS.slave_address=1;                                    // The slave address is assigned.
+  Ko.MODBUS.funtion_code=3;                                     // Retention registers are read.
+  Ko.MODBUS.start_address=1;                                    // The start register to be read is assigned.
+  Ko.MODBUS.coils_no=1;                                         // The number of coils is assigned.
+  Ko.MODBUS=Modbus.Modbus_Telegram(Ko.MODBUS);                  /* Sends a Modbus telegram, waits for a response from the slave, verifies if 
+                                                                   it is valid and the received registers*/
+  Serial.println();
+  Serial.println("Modbus message...");            // The sensor reading is printed by registering it in hexadecimal format.
+  Serial.print("-> Slave address: ");
+  Serial.println(Ko.MODBUS.registers[0],HEX);
+  Serial.print("-> Funtion code: ");
+  Serial.println(Ko.MODBUS.registers[1],HEX);
+  Serial.println("***************** DATA *****************");   
+  Serial.print("-> Start address (MSB): ");
+  Serial.println(Ko.MODBUS.registers[2],HEX);
+  Serial.print("-> Start address: ");
+  Serial.println(Ko.MODBUS.registers[3],HEX);
+  Serial.print("-> Number of coils (MSB): ");
+  Serial.println(Ko.MODBUS.registers[4],HEX);
+  Serial.print("-> Number of coils: ");
+  Serial.println(Ko.MODBUS.registers[5],HEX);
+  Serial.println("****************************************");
+  Serial.print("-> Cyclic Redundancy Check (MSB): ");
+  Serial.println(Ko.MODBUS.registers[6],HEX);
+  Serial.print("-> Cyclic Redundancy Check (LSM): ");
+  Serial.println(Ko.MODBUS.registers[7],HEX);
   Serial.println();
   
   Ti.DELAY_TMR(500);                                // A delay of 500ms is applied.
@@ -68,5 +81,5 @@ void setup() {
   Comms.SET_LED_RGB(led_off);                       // Turns off the RGB LED.
 
   Comms.Communication_Task();                       // Communication tasks are performed.
-/****************************************************************************************************************************************************/
+/********************************************************************************************************************************************/
  }
