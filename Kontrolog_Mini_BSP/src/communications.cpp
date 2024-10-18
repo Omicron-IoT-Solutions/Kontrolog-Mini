@@ -454,13 +454,9 @@ void comms::Prepare_Data_To_Send(void)
 
         //ModBus RTU
         /*
-        data = (Ko.MODBUS.registers[2]<<8)|Ko.MODBUS.registers[3];
+        data = (Ko.MODBUS.registers[3]<<8)|Ko.MODBUS.registers[4];
         buf_str[1] =(data>>8)&0x00FF;
         buf_str[2] =(data&0x00FF);
-
-        data = (Ko.MODBUS.registers[4]<<8)|Ko.MODBUS.registers[5];
-        buf_str[3] =(data>>8)&0x00FF;
-        buf_str[4] =(data&0x00FF);
         */
 
         // DC Voltage 

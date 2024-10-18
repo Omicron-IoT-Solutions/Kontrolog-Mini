@@ -52,11 +52,7 @@ unsigned int i,j;
             Write_Int_EEPROM(EEPROM_CONFIG_INI+i,Initial_Params[i]);           
             Ko.CONFIG.Array[i]=Initial_Params[i];                              
             }
- 
-        //Factory Reset for Comm. Module Parameters
-        Ko.SIGFOX_MOD.zone=2;                                                      // Sigfox   RC2: USA
-        Ko.LORA_MOD.band=US915;                                                    // Lora Band USA
-        Ko.CONFIG.DT.RF_zone=2;                                                    // RF Zone 2: USA
+
         Write_Int_EEPROM(RTC_DIR+2,-5);                                            // Defaul Time Zone
         Ko.RTC.time_zone=-5;  
         
@@ -74,6 +70,7 @@ unsigned int i,j;
         // Outputs
         Read_Sensor_Data (OUT1_DIR,Ko.OUT1.Array,16);
         Read_Sensor_Data (OUT2_DIR,Ko.OUT2.Array,16);
+        
         // General Configuration
         for (i=0;i<16;i++)
             {
@@ -96,6 +93,23 @@ unsigned int i,j;
     // Init timers for delay in activation of outputs
     Ko.OUT1.start_delay=10;
     Ko.OUT2.start_delay=10;
+
+    // Init Comm. Module RF Zone
+    if(Ko.CONFIG.DT.RF_zone==1)
+        {
+        Ko.LORA_MOD.band=EU868;                                                    // Lora Band EU868
+        Ko.SIGFOX_MOD.zone=RCZ1;
+        }
+    else if (Ko.CONFIG.DT.RF_zone==4)                                               
+        {
+        Ko.LORA_MOD.band=AU915;                                                     
+        Ko.SIGFOX_MOD.zone=RCZ4;
+        }
+    else 
+        {
+        Ko.LORA_MOD.band=US915;                                                  // Default US915
+        Ko.SIGFOX_MOD.zone=RCZ2;
+        }
 }
 
 // Init Factory sensor data in EEPROM

@@ -53,28 +53,29 @@ void setup() {
   Ko.MODBUS.coils_no=1;                                         // The number of coils is assigned.
   Ko.MODBUS=Modbus.Modbus_Telegram(Ko.MODBUS);                  /* Sends a Modbus telegram, waits for a response from the slave, verifies if 
                                                                    it is valid and the received registers*/
-  Serial.println();
-  Serial.println("Modbus message...");            // The sensor reading is printed by registering it in hexadecimal format.
-  Serial.print("-> Slave address: ");
-  Serial.println(Ko.MODBUS.registers[0],HEX);
-  Serial.print("-> Funtion code: ");
-  Serial.println(Ko.MODBUS.registers[1],HEX);
-  Serial.println("***************** DATA *****************");   
-  Serial.print("-> Start address (MSB): ");
-  Serial.println(Ko.MODBUS.registers[2],HEX);
-  Serial.print("-> Start address: ");
-  Serial.println(Ko.MODBUS.registers[3],HEX);
-  Serial.print("-> Number of coils (MSB): ");
-  Serial.println(Ko.MODBUS.registers[4],HEX);
-  Serial.print("-> Number of coils: ");
-  Serial.println(Ko.MODBUS.registers[5],HEX);
-  Serial.println("****************************************");
-  Serial.print("-> Cyclic Redundancy Check (MSB): ");
-  Serial.println(Ko.MODBUS.registers[6],HEX);
-  Serial.print("-> Cyclic Redundancy Check (LSM): ");
-  Serial.println(Ko.MODBUS.registers[7],HEX);
-  Serial.println();
-  
+
+  // The sensor reading is printed by registering it in hexadecimal format.
+
+  Serial.print("\nModbus message: | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 |\n");
+  /*
+                                                                        |        DATA READ        |
+  Modbus message: |     Byte 0    |     Byte 1    |        Byte 2       |   Byte 3   |   Byte 4   | Byte 5 | Byte 6 |
+  Uplink message: | Slave Address | Function code | Number of Registers | Register 1 | Register 2 |  CRC   |  CRC   |
+  */
+  Serial.print("Uplink message: ");
+  for (int x = 0; x < 7; x++)
+  {
+    Serial.print("|  ");
+    Serial.print("0x");
+    if (Ko.MODBUS.registers[x] < 0x10)
+    {
+      Serial.print("0");
+    }
+    Serial.print(Ko.MODBUS.registers[x],HEX);
+    Serial.print("  ");
+  } 
+  Serial.print("|\n\n");
+
   Ti.DELAY_TMR(500);                                // A delay of 500ms is applied.
   Comms.SET_LED_RGB(led_violet);                    // Turns on the RGB LED and activates it in red color.
   Ti.DELAY_TMR(500);                                // A delay of 500ms is applied.
