@@ -54,13 +54,14 @@ void setup() {
   Ko.MODBUS=Modbus.Modbus_Telegram(Ko.MODBUS);                  /* Sends a Modbus telegram, waits for a response from the slave, verifies if 
                                                                    it is valid and the received registers*/
 
-  // The sensor reading is printed by registering it in hexadecimal format.
-
-  Serial.print("\nModbus message: | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 |\n");
+  // The sensor reading is printed by registering it in hexadecimal and decimal format.
+  Serial.println("                                           |    DATA READ    |");
+  Serial.print("Modbus message: | Byte 0 | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 |\n");
   /*
                                                                         |        DATA READ        |
   Modbus message: |     Byte 0    |     Byte 1    |        Byte 2       |   Byte 3   |   Byte 4   | Byte 5 | Byte 6 |
   Uplink message: | Slave Address | Function code | Number of Registers | Register 1 | Register 2 |  CRC   |  CRC   |
+
   */
   Serial.print("Uplink message: ");
   for (int x = 0; x < 7; x++)
@@ -75,6 +76,11 @@ void setup() {
     Serial.print("  ");
   } 
   Serial.print("|\n\n");
+
+  float SensorValue = (Ko.MODBUS.registers[3] << 8) | Ko.MODBUS.registers[4];
+  Serial.print("Sensor read: ");
+  Serial.print(SensorValue/1000.0,3);
+  Serial.print("[und]\n\n");
 
   Ti.DELAY_TMR(500);                                // A delay of 500ms is applied.
   Comms.SET_LED_RGB(led_violet);                    // Turns on the RGB LED and activates it in red color.
