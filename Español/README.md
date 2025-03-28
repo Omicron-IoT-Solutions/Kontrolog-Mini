@@ -3,7 +3,7 @@
 ## General
 Este repositorio contiene instrucciones, manuales, esquemas, paquetes y ejemplos para programar tu dispositivo Kontrolog Mini con las diferentes funciones que mejor se adapten a tu aplicación.
 
-## Description
+## Descripción
 ![bitmap](https://github.com/user-attachments/assets/d31e644a-32ff-4a47-b626-77845fbbe767)
 El dispositivo Kontrolog Mini es un controlador programable para IoT (Internet de las Cosas) que incorpora la potente tecnología de procesamiento ESP32, diseñado para el control y monitoreo remoto y en tiempo real de diversos procesos con altos requisitos de seguridad y precisión. Adaptado a tu aplicación, el dispositivo puede utilizarse fácilmente después de la instalación. Aloja componentes electrónicos como un microcontrolador (CPU), memoria y otros elementos de hardware, tales como fuentes de voltaje, salidas de potencia y los puertos necesarios para conectar los sensores y el módulo de comunicación IoT. El microcontrolador contiene el software embebido, encargado de realizar tareas como: leer los sensores conectados a sus puertos, obtener su información, crear los paquetes o tramas de monitoreo, configurar y activar el módulo de comunicación, y enviar los datos en intervalos variables según los tiempos de publicación programados, además de generar alertas y ejecutar tareas de control. Además, el software está disponible en lenguaje C++ de código abierto, lo que permite contar con dos modos de programación, los cuales presentamos en dos ramas: 
 
